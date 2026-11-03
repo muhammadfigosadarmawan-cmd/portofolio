@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b18" />
+    <meta
+      name="description"
+      content="Portfolio Muhammad Figo Darmawan — Mahasiswa Informatika, Web Developer & Frontend Enthusiast."
+    />
+    <title>M.Figo Darmawan | Web Developer</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Tailwind Config -->
+    <script src="assets/js/tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+      <div class="loader-content">
+        <div class="loader-logo">
+          <div class="loader-ring"></div>
+          <div class="loader-ring ring-inner"></div>
+          <span>FD</span>
+        </div>
+        <h1 class="loader-name">MUHAMMAD <span>FIGO</span> DARMAWAN</h1>
+        <p class="loader-role">
+          Web Developer | Frontend Enthusiast | Lifelong Learner
+        </p>
+        <div class="loader-progress">
+          <div class="progress-track">
+            <div id="progress-bar"></div>
+          </div>
+          <span id="progress-text">0%</span>
+        </div>
+        <p class="loader-status">Loading Portfolio<span class="dots"></span></p>
+      </div>
+    </div>
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <canvas id="stars"></canvas>
+
+    <!-- HEADER / NAVBAR -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <nav class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+        <a href="#home" class="flex items-center gap-3 font-bold text-lg">
+          <span class="w-9 h-9 rounded-xl grid place-items-center primary-btn">
+            <i class="fa-solid fa-bolt"></i>
+          </span>
+          <span>FIGO<span class="gradient-text">.</span></span>
+        </a>
+
+        <div
+          id="navMenu"
+          class="mobile-menu md:!flex md:!static md:!p-0 md:!bg-transparent md:!border-0 md:!rounded-none md:!flex-row md:!items-center md:!gap-8 flex-col gap-5 text-sm"
+        >
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a
+            href="#contact"
+            class="primary-btn rounded-full px-5 py-3 text-xs font-semibold hidden sm:inline-flex"
+          >
+            Let's Talk
+            <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+          </a>
+          <button id="menuBtn" class="md:hidden text-xl p-2" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="min-h-screen flex items-center pt-28 pb-16">
+        <div class="max-w-6xl w-[90%] mx-auto grid md:grid-cols-2 items-center gap-10">
+          <div class="relative z-10">
+            <p class="hero-enter text-sm text-purple-300 mb-4">
+              <span class="text-cyan-300">✦</span> HELLO, WELCOME TO MY PORTFOLIO
+            </p>
+
+            <h1
+              class="hero-enter hero-enter-delay text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight"
+            >
+              Muhammad<br />
+              <span class="gradient-text">Figo</span> Darmawan
+            </h1>
+
+            <h2 class="hero-enter text-lg sm:text-xl text-blue-300 mt-5 mb-5">
+              I'm a <span id="typing"></span><span class="animate-pulse">|</span>
+            </h2>
+
+            <p class="hero-enter text-sm leading-8 text-slate-400 max-w-lg">
+              Mahasiswa S1 Informatika Universitas Teknokrat Indonesia yang
+              memiliki ketertarikan pada pengembangan website, desain antarmuka,
+              dan teknologi digital. Saya terus belajar membangun pengalaman web
+              yang modern dan responsif.
+            </p>
+
+            <div class="hero-enter flex flex-wrap gap-3 mt-8">
+              <a href="#projects" class="primary-btn rounded-full px-6 py-3.5 text-sm font-semibold">
+                Explore My Work <i class="fa-solid fa-arrow-right ml-2"></i>
+              </a>
+              <a href="#contact" class="outline-btn rounded-full px-6 py-3.5 text-sm">
+                Contact Me
+              </a>
+            </div>
+
+            <div class="flex gap-5 mt-8 text-xl text-slate-400">
+              <a
+                href="https://github.com/muhammadfigosadarmawan-cmd"
+                target="_blank"
+                rel="noopener"
+                class="hover:text-cyan-300 hover:-translate-y-1 transition"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noopener"
+                class="hover:text-cyan-300 hover:-translate-y-1 transition"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noopener"
+                class="hover:text-cyan-300 hover:-translate-y-1 transition"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+
+            <a href="#about" class="inline-flex gap-3 items-center mt-10 text-xs text-slate-500">
+              <i class="fa-solid fa-computer-mouse animate-bounce text-purple-400"></i>
+              Scroll to discover
+              <i class="fa-solid fa-arrow-down text-purple-400"></i>
+            </a>
+          </div>
+
+          <div class="relative flex justify-center items-center min-h-[440px] hero-enter hero-enter-delay">
+            <div class="orbit"></div>
+
+            <div class="absolute top-10 left-0 sm:left-5 glass rounded-xl px-4 py-3 float z-10 text-xs">
+              <i class="fa-solid fa-code text-cyan-300 mr-2"></i>
+              Web Developer
+            </div>
+
+            <div class="absolute top-20 right-0 glass rounded-xl px-4 py-3 float float-delay z-10 text-xs">
+              <i class="fa-solid fa-wand-magic-sparkles text-purple-300 mr-2"></i>
+              Creative Design
+            </div>
+
+            <div class="absolute bottom-12 right-0 sm:right-5 glass rounded-xl px-4 py-3 float z-10 text-xs">
+              <i class="fa-solid fa-layer-group text-cyan-300 mr-2"></i>
+              Laravel + Tailwind
+            </div>
+
+            <div class="portrait relative z-0">
+              <img
+                src="assets/images/foto-figo.jpg"
+                alt="Foto Muhammad Figo Darmawan"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+              />
+              <div class="portrait-placeholder" style="display: none">
+                <i class="fa-solid fa-user-astronaut"></i>
+              </div>
+              <div class="absolute bottom-0 left-0 w-full text-center py-5 bg-gradient-to-t from-[#080b18] to-transparent">
+                <p class="font-semibold">Muhammad Figo Darmawan</p>
+                <p class="text-xs text-slate-300 mt-1">Informatics Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="py-28 border-y border-white/5 bg-white/[.015]">
+        <div class="max-w-6xl w-[90%] mx-auto grid md:grid-cols-2 gap-14 items-center">
+          <div class="reveal-left">
+            <p class="text-purple-300 text-xs font-semibold tracking-widest mb-3">ABOUT ME</p>
+            <h2 class="text-3xl sm:text-4xl font-bold leading-tight">
+              Mengenal Saya dan <span class="gradient-text">Perjalanan IT</span>
+            </h2>
+            <p class="text-slate-400 text-sm leading-8 mt-6">
+              Halo! Saya Muhammad Figo Darmawan, mahasiswa S1 Informatika di
+              Universitas Teknokrat Indonesia. Saya tertarik dengan dunia
+              teknologi, terutama pengembangan website dan desain antarmuka.
+            </p>
+            <p class="text-slate-400 text-sm leading-8 mt-4">
+              Saat ini saya berfokus mempelajari Tailwind CSS untuk membangun
+              frontend yang responsif serta Laravel untuk pengembangan backend.
+              Saya juga senang mengeksplorasi ide dan mengerjakan proyek sebagai
+              bagian dari proses belajar.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="skill-pill rounded-full px-4 py-2 text-xs">Web Development</span>
+              <span class="skill-pill rounded-full px-4 py-2 text-xs">Frontend</span>
+              <span class="skill-pill rounded-full px-4 py-2 text-xs">Backend</span>
+              <span class="skill-pill rounded-full px-4 py-2 text-xs">UI/UX</span>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <div class="glass rounded-3xl p-7 sm:p-9 relative overflow-hidden">
+              <div class="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-purple-600/10 blur-3xl"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-7">
+                  <div class="w-11 h-11 rounded-xl bg-purple-500/15 text-purple-300 grid place-items-center">
+                    <i class="fa-solid fa-id-card text-xl"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold">Personal Information</h3>
+                </div>
+
+                <div class="space-y-6 text-sm">
+                  <div class="flex gap-4 items-center">
+                    <i class="fa-solid fa-user text-purple-300 w-5"></i>
+                    <div>
+                      <p class="text-slate-500 text-xs">Nama Lengkap</p>
+                      <p class="mt-1">Muhammad Figo Darmawan</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 items-center">
+                    <i class="fa-solid fa-graduation-cap text-purple-300 w-5"></i>
+                    <div>
+                      <p class="text-slate-500 text-xs">Pendidikan</p>
+                      <p class="mt-1">S1 Informatika</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 items-center">
+                    <i class="fa-solid fa-building-columns text-purple-300 w-5"></i>
+                    <div>
+                      <p class="text-slate-500 text-xs">Universitas</p>
+                      <p class="mt-1">Universitas Teknokrat Indonesia</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 items-center">
+                    <i class="fa-solid fa-code text-purple-300 w-5"></i>
+                    <div>
+                      <p class="text-slate-500 text-xs">Fokus</p>
+                      <p class="mt-1">Frontend & Backend Development</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 items-center">
+                    <i class="fa-solid fa-location-dot text-purple-300 w-5"></i>
+                    <div>
+                      <p class="text-slate-500 text-xs">Lokasi</p>
+                      <p class="mt-1">Lampung, Indonesia</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="py-28">
+        <div class="max-w-6xl w-[90%] mx-auto">
+          <div class="reveal text-center max-w-2xl mx-auto">
+            <p class="text-purple-300 text-xs font-semibold tracking-widest mb-3">MY TECH STACK</p>
+            <h2 class="text-3xl sm:text-4xl font-bold">
+              Technologies I <span class="gradient-text">Explore</span>
+            </h2>
+            <p class="text-slate-400 text-sm leading-7 mt-4">
+              Teknologi yang menjadi fokus pembelajaran saya dalam mengembangkan
+              aplikasi web.
+            </p>
+          </div>
+
+          <!-- FRONTEND -->
+          <div class="mt-16 reveal">
+            <div class="flex items-center gap-4 mb-7">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-400/20 grid place-items-center text-purple-300 text-xl">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Frontend Development</h3>
+                <p class="text-xs text-slate-500 mt-1">Building modern and responsive interfaces</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-brands fa-html5 text-4xl text-orange-400"></i>
+                <h4 class="font-semibold text-sm">HTML5</h4>
+                <span class="text-[10px] text-slate-500">Structure</span>
+              </div>
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-brands fa-css3-alt text-4xl text-blue-400"></i>
+                <h4 class="font-semibold text-sm">CSS3</h4>
+                <span class="text-[10px] text-slate-500">Styling</span>
+              </div>
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-brands fa-css3-alt text-4xl text-cyan-300"></i>
+                <h4 class="font-semibold text-sm">Tailwind CSS</h4>
+                <span class="text-[10px] text-slate-400">CSS Framework</span>
+              </div>
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-brands fa-js text-4xl text-yellow-300"></i>
+                <h4 class="font-semibold text-sm">JavaScript</h4>
+                <span class="text-[10px] text-slate-500">Interactivity</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACKEND -->
+          <div class="mt-14 reveal">
+            <div class="flex items-center gap-4 mb-7">
+              <div class="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-300/20 grid place-items-center text-cyan-300 text-xl">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Backend Development</h3>
+                <p class="text-xs text-slate-500 mt-1">Building application logic and managing data</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-brands fa-php text-4xl text-indigo-300"></i>
+                <h4 class="font-semibold text-sm">PHP</h4>
+                <span class="text-[10px] text-slate-500">Programming</span>
+              </div>
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-brands fa-laravel text-4xl text-red-400"></i>
+                <h4 class="font-semibold text-sm">Laravel</h4>
+                <span class="text-[10px] text-slate-400">PHP Framework</span>
+              </div>
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-solid fa-database text-4xl text-cyan-300"></i>
+                <h4 class="font-semibold text-sm">MySQL</h4>
+                <span class="text-[10px] text-slate-500">Database</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOOLS -->
+          <div class="mt-14 reveal">
+            <div class="flex items-center gap-4 mb-7">
+              <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-300/20 grid place-items-center text-amber-300 text-xl">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Tools & Design</h3>
+                <p class="text-xs text-slate-500 mt-1">Tools for coding and interface design</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-brands fa-figma text-4xl text-pink-300"></i>
+                <h4 class="font-semibold text-sm">Figma</h4>
+                <span class="text-[10px] text-slate-500">UI/UX Design</span>
+              </div>
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-brands fa-github text-4xl text-white"></i>
+                <h4 class="font-semibold text-sm">GitHub</h4>
+                <span class="text-[10px] text-slate-500">Repository</span>
+              </div>
+              <div class="tech-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa-solid fa-code text-4xl text-blue-300"></i>
+                <h4 class="font-semibold text-sm">VS Code</h4>
+                <span class="text-[10px] text-slate-500">Code Editor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="py-28 border-y border-white/5 bg-white/[.015]">
+        <div class="max-w-6xl w-[90%] mx-auto">
+          <div class="reveal mb-12">
+            <p class="text-purple-300 text-xs font-semibold tracking-widest mb-3">MY PROJECTS</p>
+            <h2 class="text-3xl sm:text-4xl font-bold">
+              Selected <span class="gradient-text">Works</span>
+            </h2>
+            <p class="text-slate-400 text-sm mt-4 leading-7 max-w-xl">
+              Proyek dan konsep yang saya kerjakan sebagai bagian dari proses
+              belajar dan eksplorasi desain.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="project-card rounded-2xl overflow-hidden reveal">
+              <div class="project-art">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div class="p-6">
+                <span class="text-[10px] text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">
+                  Flutter · Mobile
+                </span>
+                <h3 class="font-semibold text-lg mt-4">Aplikasi Registrasi Mahasiswa</h3>
+                <p class="text-xs text-slate-400 leading-7 mt-3">
+                  Proyek aplikasi mobile untuk mengelola formulir pendaftaran,
+                  input data, dan tampilan informasi mahasiswa menggunakan
+                  Flutter.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="text-[10px] text-slate-400">Dart</span>
+                  <span class="text-[10px] text-slate-400">Flutter</span>
+                  <span class="text-[10px] text-slate-400">UI</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card rounded-2xl overflow-hidden reveal">
+              <div class="project-art" style="background: radial-gradient(circle, #4c376f, #171a35 70%)">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div class="p-6">
+                <span class="text-[10px] text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">
+                  Figma · UI/UX
+                </span>
+                <h3 class="font-semibold text-lg mt-4">Aplikasi Penjualan Lampu</h3>
+                <p class="text-xs text-slate-400 leading-7 mt-3">
+                  Konsep aplikasi e-commerce dengan desain onboarding, login,
+                  register, home, dan profile untuk pengalaman belanja yang
+                  sederhana.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="text-[10px] text-slate-400">Figma</span>
+                  <span class="text-[10px] text-slate-400">Prototyping</span>
+                  <span class="text-[10px] text-slate-400">UI/UX</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card rounded-2xl overflow-hidden reveal">
+              <div class="project-art" style="background: radial-gradient(circle, #264e75, #171a35 70%)">
+                <i class="fa-solid fa-earth-asia"></i>
+              </div>
+              <div class="p-6">
+                <span class="text-[10px] text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">
+                  Branding · Concept
+                </span>
+                <h3 class="font-semibold text-lg mt-4">Nusantara Journey</h3>
+                <p class="text-xs text-slate-400 leading-7 mt-3">
+                  Konsep identitas visual aplikasi perjalanan bertema Nusantara
+                  dengan pendekatan logo sederhana, elegan, dan mudah diingat.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="text-[10px] text-slate-400">Logo</span>
+                  <span class="text-[10px] text-slate-400">Design</span>
+                  <span class="text-[10px] text-slate-400">Branding</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-28">
+        <div class="max-w-6xl w-[90%] mx-auto">
+          <div class="glass rounded-3xl p-7 sm:p-12 grid md:grid-cols-2 gap-12 relative overflow-hidden reveal">
+            <div class="absolute -right-32 -bottom-40 w-96 h-96 rounded-full bg-purple-600/10 blur-3xl"></div>
+
+            <div class="relative">
+              <p class="text-purple-300 text-xs font-semibold tracking-widest mb-3">GET IN TOUCH</p>
+              <h2 class="text-3xl sm:text-4xl font-bold leading-tight">
+                Let's Build Something <span class="gradient-text">Amazing</span>
+              </h2>
+              <p class="text-slate-400 text-sm leading-8 mt-5">
+                Punya ide, ingin berdiskusi tentang teknologi, atau tertarik
+                berkolaborasi? Hubungi saya melalui formulir atau media sosial.
+              </p>
+
+              <div class="space-y-5 mt-8 text-sm">
+                <div class="flex items-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-purple-500/15 text-purple-300 grid place-items-center">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-500 text-xs">Email</p>
+                    <p id="displayEmail" class="mt-1">EMAIL_KAMU</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-purple-500/15 text-purple-300 grid place-items-center">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-500 text-xs">Location</p>
+                    <p class="mt-1">Lampung, Indonesia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <form id="contactForm" class="relative space-y-4">
+              <div>
+                <label for="name" class="block text-xs text-slate-400 mb-2">Nama</label>
+                <input class="contact-input" id="name" placeholder="Masukkan nama kamu" required />
+              </div>
+              <div>
+                <label for="email" class="block text-xs text-slate-400 mb-2">Email</label>
+                <input class="contact-input" id="email" type="email" placeholder="nama@email.com" required />
+              </div>
+              <div>
+                <label for="message" class="block text-xs text-slate-400 mb-2">Pesan</label>
+                <textarea
+                  class="contact-input min-h-32 resize-y"
+                  id="message"
+                  placeholder="Tulis pesan kamu..."
+                  required
+                ></textarea>
+              </div>
+              <button class="primary-btn w-full rounded-xl py-4 text-sm font-semibold" type="submit">
+                Kirim melalui WhatsApp
+                <i class="fa-solid fa-paper-plane ml-2"></i>
+              </button>
+              <p class="text-[10px] text-slate-500">
+                Pesan akan dibuka di WhatsApp setelah kamu menekan tombol.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-7">
+      <div class="max-w-6xl w-[90%] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+        <a href="#home" class="font-bold text-lg">FIGO<span class="gradient-text">.</span></a>
+        <p class="text-xs text-slate-500 text-center">
+          © <span id="year"></span> Muhammad Figo Darmawan. All rights reserved.
+        </p>
+        <div class="flex gap-5 text-slate-400">
+          <a href="https://github.com/muhammadfigosadarmawan-cmd" target="_blank" rel="noopener" class="hover:text-cyan-300">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" class="hover:text-cyan-300">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="hover:text-cyan-300">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button
+      id="backTop"
+      class="back-top fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl primary-btn"
+      aria-label="Kembali ke atas"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- SCRIPTS (urutan penting: config dulu) -->
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/typing.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/stars.js"></script>
+  </body>
+</html>
